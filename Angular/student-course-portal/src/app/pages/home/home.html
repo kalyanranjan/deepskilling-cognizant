@@ -1,0 +1,35 @@
+<div class="home-page">
+  <h1 class="welcome-heading">
+    Welcome To The {{ portalName }}
+  </h1>
+  <p class="description">
+    Manage And Track Your Assigned Courses
+  </p>
+
+  <div class="stats-row">
+    <div class="stat-card">
+      <h3 class="stat-label">Courses Available</h3>
+      <p class="stats-value">
+        {{ availableCoursesCount }}
+      </p>
+    </div>
+    <div class="stat-card">
+      <h3 class="stat-label">Enrolled</h3>
+      <p class="stats-value">3</p>
+    </div>
+    <div class="stat-card">
+      <h3 class="stat-label">GPA</h3>
+      <p class="stats-value">3.8</p>
+    </div>
+  </div>
+
+  <input type="text" [(ngModel)]="searchTerm" placeholder="Search Courses ...">
+
+  <p> Searching For {{searchTerm}} </p>
+
+  <button [disabled]="!isPortalActive" (click)="onEnrollClick()">
+    Enroll Now
+  </button>
+
+  <p>{{ message }}</p>
+</div>

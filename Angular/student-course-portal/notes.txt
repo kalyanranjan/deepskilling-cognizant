@@ -1,0 +1,10 @@
+angular.json
+tsconfig.json
+tsconfig.app.json
+package.json
+src/main.ts,
+src/app/app.config.ts
+src/app/app.component.ts
+src/index.html
+
+explain each file's purpose in short (will do it at end)

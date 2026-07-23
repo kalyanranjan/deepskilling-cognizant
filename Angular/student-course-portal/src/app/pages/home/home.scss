@@ -1,0 +1,36 @@
+.home-page {
+  padding: 1rem;
+
+  input[type="text"] {
+    width: 100%;
+    max-width: 300px;
+    padding: 0.5rem;
+    margin: 1rem 0;
+    outline: none;
+  }
+
+  button {
+    padding: 0.5rem 1rem;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    cursor: pointer;
+  }
+
+  .stats-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+
+  .stat-card {
+    min-width: 200px;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+
+    h3 {
+      margin-top: 0;
+    }
+  }
+}
