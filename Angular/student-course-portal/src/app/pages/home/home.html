@@ -15,21 +15,15 @@
     </div>
     <div class="stat-card">
       <h3 class="stat-label">Enrolled</h3>
-      <p class="stats-value">3</p>
+      <p class="stats-value">{{ enrolledCount$ | async }}</p>
     </div>
     <div class="stat-card">
       <h3 class="stat-label">GPA</h3>
-      <p class="stats-value">3.8</p>
+      <p class="stats-value">8.57</p>
     </div>
   </div>
 
-  <input type="text" [(ngModel)]="searchTerm" placeholder="Search Courses ...">
+  <app-course-summary-widget></app-course-summary-widget>
 
-  <p> Searching For {{searchTerm}} </p>
-
-  <button [disabled]="!isPortalActive" (click)="onEnrollClick()">
-    Enroll Now
-  </button>
-
-  <p>{{ message }}</p>
+  <app-notification></app-notification>
 </div>

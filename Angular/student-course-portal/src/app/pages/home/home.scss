@@ -1,24 +1,11 @@
 .home-page {
   padding: 1rem;
-
-  input[type="text"] {
-    width: 100%;
-    max-width: 300px;
-    padding: 0.5rem;
-    margin: 1rem 0;
-    outline: none;
-  }
-
-  button {
-    padding: 0.5rem 1rem;
-    border: 1px solid #ccc;
-    border-radius: 20px;
-    cursor: pointer;
-  }
+  text-align: center;
 
   .stats-row {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     gap: 2rem;
     margin-top: 2rem;
   }
