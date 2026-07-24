@@ -48,9 +48,14 @@ describe('CourseService', () => {
       error: err => errorMessage = err.message
     });
 
-    const req = httpMock.expectOne('http://localhost:3000/courses');
-    req.flush('Server Error', { status: 500, statusText: 'Internal Server Error' });
+    const req1 = httpMock.expectOne('http://localhost:3000/courses');
+    req1.flush('Server Error', { status: 500, statusText: 'Internal Server Error' });
 
+    const req2 = httpMock.expectOne('http://localhost:3000/courses');
+    req2.flush('Server Error', { status: 500, statusText: 'Internal Server Error' });
+
+    const req3 = httpMock.expectOne('http://localhost:3000/courses');
+    req3.flush('Server Error', { status: 500, statusText: 'Internal Server Error' });
     expect(errorMessage).toBe('Failed to load courses. Please try again.');
   });
 });

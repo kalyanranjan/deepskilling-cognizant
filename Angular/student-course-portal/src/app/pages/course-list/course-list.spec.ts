@@ -3,6 +3,8 @@ import { provideMockStore, MockStore } from '@ngrx/store/testing';
 import { By } from '@angular/platform-browser';
 import { provideHttpClient } from '@angular/common/http';
 import { RouterTestingModule } from '@angular/router/testing';
+import { ActivatedRoute } from '@angular/router';
+import { of } from 'rxjs';
 import { CourseList } from './course-list';
 import { Course } from '../../models/course.model';
 
@@ -26,6 +28,7 @@ describe('CourseList', () => {
             enrollment: { enrolledCourseIds: [] }
           }
         }),
+        { provide: ActivatedRoute, useValue: { queryParams: of({}) } },
         provideHttpClient()
       ]
     }).compileComponents();
@@ -41,6 +44,8 @@ describe('CourseList', () => {
   });
 
   it('should render course cards matching the store initial state', () => {
+    component.isLoading = false;
+    fixture.detectChanges();
     const cards = fixture.debugElement.queryAll(By.css('app-course-card'));
     expect(cards.length).toBe(2);
   });
